@@ -1,0 +1,110 @@
+.contenedorCalendar {
+  width: 90vw;
+  background-color: rgb(89, 89, 89);
+  border-radius: 1rem;
+  overflow: hidden;
+  color: white;
+  position: absolute;
+  left: calc(50% - 45vw);
+  top: 5rem;
+}
+@media (min-width: 792px) {
+  .contenedorCalendar {
+    width: 70vw;
+    position: static;
+  }
+}
+.contenedorCalendar header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #936de0;
+  position: relative;
+  gap: 60vw;
+}
+@media (min-width: 792px) {
+  .contenedorCalendar header {
+    gap: 35rem;
+  }
+}
+.contenedorCalendar header h1 {
+  position: absolute;
+  font-weight: 400;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.contenedorCalendar header h1 span {
+  font-size: 1.5rem;
+}
+.contenedorCalendar header p {
+  font-size: 4rem;
+  cursor: pointer;
+}
+.contenedorDias {
+  padding: 2rem 1rem;
+  display: grid;
+  justify-items: center;
+  gap: 3vh 0;
+  grid-template-columns: repeat(7, 1fr);
+}
+@media (min-width: 792px) {
+  .contenedorDias {
+    padding: 2rem 3rem;
+  }
+}
+.contenedorDias p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@media (min-width: 792px) {
+  .contenedorDias p {
+    font-size: 2.5rem;
+  }
+}
+.contenedorDias div {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.4s;
+}
+.contenedorDias div:hover {
+  background-color: rgb(71, 71, 71);
+}
+@media (min-width: 792px) {
+  .contenedorDias div {
+    width: 6rem;
+    height: 6rem;
+    font-size: 2.5rem;
+  }
+}
+.contenedorCalendar .contenedorDias .activo {
+  background-color: #5f43ed;
+}
+/* Clases para cada día de la semana */
+.lunes {
+  grid-column: 1 / 2;
+}
+.martes {
+  grid-column: 2 / 3;
+}
+.miercoles {
+  grid-column: 3 / 4;
+}
+.jueves {
+  grid-column: 4 / 5;
+}
+.viernes {
+  grid-column: 5 / 6;
+}
+.sabado {
+  grid-column: 6 / 7;
+}
+.domingo {
+  grid-column: 7 / 8;
+}
